@@ -1,0 +1,8 @@
+{
+  "name": "datascience-extension",
+  "version": "1.0.0",
+  "description": "Chrome extension for suggesting practice projects from job listings",
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  }
+}
