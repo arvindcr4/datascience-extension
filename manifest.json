@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Job Project Suggester",
+  "version": "1.0",
+  "description": "Suggests project ideas based on job descriptions.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://generativelanguage.googleapis.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content_script.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
