@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "Chrome extension for suggesting practice projects from job listings",
   "scripts": {
-    "test": "echo \"No tests specified\""
+    "test": "jest --testEnvironment=node"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
   }
 }
