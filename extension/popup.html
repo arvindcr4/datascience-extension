@@ -4,17 +4,36 @@
   <meta charset="utf-8">
   <title>Project Suggestions</title>
   <style>
-    body { font-family: Arial, sans-serif; width: 300px; }
-    pre { white-space: pre-wrap; }
+    body { font-family: Arial, sans-serif; width: 300px; padding: 10px; }
+    pre { white-space: pre-wrap; word-wrap: break-word; }
+    h3, h4 { margin-top: 15px; margin-bottom: 5px; }
+    button { margin-top: 5px; margin-right: 5px; }
+    input[type="password"] { width: calc(100% - 6px); margin-bottom: 5px; }
+    #authStatus { margin-bottom: 5px; font-style: italic; }
+    #driveStatus { margin-top: 5px; font-style: italic; color: #333; }
+    hr { margin-top: 15px; margin-bottom: 15px; }
   </style>
 </head>
 <body>
   <h3>Job Project Suggester</h3>
   <div>
-    <label>Gemini API Key: <input type="password" id="apiKey" style="width:100%" /></label>
+    <label for="apiKey">Gemini API Key:</label>
+    <input type="password" id="apiKey" style="width:100%; box-sizing: border-box;" />
     <button id="saveKey">Save Key</button>
   </div>
+
   <hr>
+  <div>
+    <h4>Google Drive Integration</h4>
+    <div id="authStatus">Not signed in.</div>
+    <button id="signInButton">Sign in with Google</button>
+    <button id="signOutButton" style="display:none;">Sign out</button>
+    <br/>
+    <button id="saveToDriveButton" style="display:none; margin-top: 5px;">Save Current Page to Drive</button>
+    <div id="driveStatus" style="margin-top: 5px;"></div>
+  </div>
+  <hr>
+
   <button id="getProjects">Suggest Projects</button>
   <pre id="output"></pre>
   <script src="popup.js"></script>
